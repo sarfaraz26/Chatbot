@@ -1,7 +1,10 @@
+using Chatbot.UI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<OpenAIService>();
 
 var app = builder.Build();
 
