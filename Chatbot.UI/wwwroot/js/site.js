@@ -22,6 +22,13 @@
     }
 
     $('#userInput').on('input', validateSendButton);
+    validateSendButton();
+
+    $('#userInput').on('keydown', function (e) {
+        if (e.key === 'Enter') {
+            $('#btnSend').click();
+        }
+    });
 
 
     //METHODS
